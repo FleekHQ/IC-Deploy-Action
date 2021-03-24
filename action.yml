@@ -1,0 +1,16 @@
+name: 'Fleek IC Action'
+description: 'Deploys canisters to the IC'
+author: 'Fleek Labs'
+branding:
+  icon: circle
+  color: gray-dark
+inputs:
+  identity:
+    description: 'IC identity for deploying the canisters'
+    required: true
+  wallets:
+    description: 'IC wallets for deploying the canisters'
+    required: true 
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
