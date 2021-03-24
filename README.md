@@ -30,7 +30,7 @@ jobs:
         run: npm install
       - name: Deploy canisters
         id: deploy
-        uses: ./
+        uses: fleekhq/ic-deploy-action@v1
         with:
           identity: ${{ secrets.DFX_IDENTITY }}
           wallets: ${{ secrets.DFX_WALLETS }}
