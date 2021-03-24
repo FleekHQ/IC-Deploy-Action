@@ -50,7 +50,7 @@ dfx new hello-world
 Then, you can make an initial deployment to the IC.
 
 ```
-  dfx deploy --network=ic
+dfx deploy --network=ic
 ```
 
 The canisters are now deployed. At this point, a `canister_ids.json` file will have been created in your repository. It's important to push this file to github, because it identifies your Canister on the IC.
