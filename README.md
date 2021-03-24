@@ -47,7 +47,7 @@ If it's not already done, create a new project with the `dfx` CLI.
 dfx new hello-world
 ```
 
-Then, you can make an initial deployment to the IC.
+Then, you can make an initial deployment to the IC after having installed dependencies with `npm install` if necessary.
 
 ```
 dfx deploy --network=ic
