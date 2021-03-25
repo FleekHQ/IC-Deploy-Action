@@ -1,4 +1,4 @@
-![](https://storageapi.fleek.co/fleek-team-bucket/Blog%20Inline/ic-action.png)
+![](https://storageapi.fleek.co/fleek-team-bucket/ic-action.png)
 
 # IC Deploy Action
 [![Fleek](https://img.shields.io/badge/Made%20by-Fleek-blue)](https://fleek.co/)
