@@ -80,6 +80,32 @@ cat ~/.config/dfx/identity/default/wallets.json
 
 Note that this file will not be present if you have not initially deployed the canisters.
 
+## Optional inputs
+### Network
+By default, the action will deploy with the command `dfx deploy --network=ic`, but the value of `ic` can be overriden through the `network` input.
+
+```yml
+on: [push]
+
+jobs:
+  test-deploy:
+    runs-on: ubuntu-latest
+    name: A job to deploy canisters to the IC
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Deploy canisters
+        id: deploy
+        uses: fleekhq/ic-deploy-action@v1
+        with:
+          identity: ${{ secrets.DFX_IDENTITY }}
+          wallets: ${{ secrets.DFX_WALLETS }}
+          network: alpha
+      - name: Show success message
+        run: echo success!
+```
+
 ## Contributing
 
 There are a lot of variations of Canister deployments possible, such as not using the default identity and wallet, different working directories, deployments that flushes the memory in the canisters and some that don't, etc...
