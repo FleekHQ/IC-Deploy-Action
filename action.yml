@@ -11,6 +11,10 @@ inputs:
   wallets:
     description: 'IC wallets for deploying the canisters'
     required: true 
+  network:
+    description: 'The network that the canister will be deployed to'
+    required: false
+    default: 'ic'
 runs:
   using: 'docker'
   image: 'Dockerfile'
