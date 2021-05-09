@@ -55,7 +55,7 @@ dfx deploy --network=ic
 
 The canisters are now deployed. At this point, a `canister_ids.json` file will have been created in your repository. It's important to push this file to github, because it identifies your Canister on the IC.
 
-Furthermore, these canisters have been deployed with a particular identity, which you by default is called `default`. We will have to export the private key associated with that identity through a Github secret.
+Furthermore, these canisters have been deployed with a particular identity, which by default is called `default`. We will have to export the private key associated with that identity through a Github secret.
 
 ## Github Secrets
 As seen in the code snippets in the previous section, the Github Action necessitates the addition of two secrets in order to make additional deployments through the same identity.
