@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh -l
 
 echo Creating deployer directory
 
@@ -15,7 +15,7 @@ echo $INPUT_WALLETS > ~/.config/dfx/identity/default/wallets.json
 
 which dfx
 
-tail -c 100  $(which dfx)
+ls /usr/loca/bin
 
 echo "Deploying to the IC"
 
