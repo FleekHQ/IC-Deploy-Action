@@ -15,7 +15,9 @@ echo $INPUT_WALLETS > ~/.config/dfx/identity/default/wallets.json
 
 which dfx
 
-ls /usr/local/bin
+echo "Path:"
+
+echo $PATH
 
 echo "Deploying to the IC"
 
