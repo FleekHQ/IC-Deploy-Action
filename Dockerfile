@@ -16,7 +16,7 @@ RUN apt-get update
 
 RUN apt-get install -y curl
 
-RUN apt-get install -y apt-get install libgl1-mesa-glx
+RUN apt-get install -y libgl1-mesa-glx
 
 RUN ["chmod", "+x", "/home/dfx-install.sh"]
 
