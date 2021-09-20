@@ -106,6 +106,32 @@ jobs:
         run: echo success!
 ```
 
+### dfn_params
+The parameters of the dfn call can be customized with the `dfn_params` input. This input will simply append the content of the input to the dfn command.
+For example, in order to run, `dfn --no-wallet` instead of the default `dfn`, input `--no-wallet` to this input.
+
+```yml
+on: [push]
+
+jobs:
+  test-deploy:
+    runs-on: ubuntu-latest
+    name: A job to deploy canisters to the IC
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Deploy canisters
+        id: deploy
+        uses: fleekhq/ic-deploy-action@v1
+        with:
+          identity: ${{ secrets.DFX_IDENTITY }}
+          wallets: ${{ secrets.DFX_WALLETS }}
+          dfn_params: --no-wallet
+      - name: Show success message
+        run: echo success!
+```
+
 ## Contributing
 
 There are a lot of variations of Canister deployments possible, such as not using the default identity and wallet, different working directories, deployments that flushes the memory in the canisters and some that don't, etc...
