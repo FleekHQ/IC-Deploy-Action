@@ -15,6 +15,10 @@ inputs:
     description: 'The network that the canister will be deployed to'
     required: false
     default: 'ic'
+  dfn_params:
+    description: 'Parameters appended to the dfn command'
+    required: false
+    default: ''    
 runs:
   using: 'docker'
   image: 'Dockerfile'
