@@ -1,4 +1,4 @@
-FROM node:14.16.0-alpine
+FROM node:16
 
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH="/home/node/.npm-global/bin:$PATH"
