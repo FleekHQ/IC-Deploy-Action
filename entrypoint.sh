@@ -19,4 +19,4 @@ ls /usr/local/bin
 
 echo "Deploying to the IC"
 
-/usr/local/bin/dfx deploy --network=$INPUT_NETWORK $INPUT_DFX_PARAMS
+dfx deploy --network=$INPUT_NETWORK $INPUT_DFX_PARAMS
