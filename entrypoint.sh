@@ -13,8 +13,10 @@ echo $INPUT_IDENTITY > ~/.config/dfx/identity/default/identity.pem
 sed -i 's/\\r\\n/\r\n/g' ~/.config/dfx/identity/default/identity.pem
 echo $INPUT_WALLETS > ~/.config/dfx/identity/default/wallets.json
 
-echo "Deploying to the IC"
-
 which dfx
+
+tail -c 100  $(which dfx)
+
+echo "Deploying to the IC"
 
 /usr/local/bin/dfx deploy --network=$INPUT_NETWORK $INPUT_DFX_PARAMS
