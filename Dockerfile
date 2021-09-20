@@ -12,6 +12,8 @@ COPY entrypoint.sh /home/node/entrypoint.sh
 USER root
 
 # RUN apk add --update curl
+RUN apt-get update
+
 RUN apt-get install -y curl
 
 RUN apt-get install -y apt-get install libgl1-mesa-glx
