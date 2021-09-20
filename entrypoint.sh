@@ -21,4 +21,4 @@ echo $PATH
 
 echo "Deploying to the IC"
 
-dfx deploy --network=$INPUT_NETWORK
+dfx deploy --network=$INPUT_NETWORK $INPUT_DFX_PARAMS

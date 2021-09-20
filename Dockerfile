@@ -1,4 +1,5 @@
-FROM node:16-alpine3.11
+# FROM node:16-alpine3.11
+FROM node:16
 
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH="/home/node/.npm-global/bin:$PATH"
@@ -10,7 +11,8 @@ COPY entrypoint.sh /home/node/entrypoint.sh
 
 USER root
 
-RUN apk add --update curl
+# RUN apk add --update curl
+RUN apt-get install curl
 
 RUN ["chmod", "+x", "/home/dfx-install.sh"]
 
