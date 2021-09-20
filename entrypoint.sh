@@ -15,4 +15,6 @@ echo $INPUT_WALLETS > ~/.config/dfx/identity/default/wallets.json
 
 echo "Deploying to the IC"
 
-dfx deploy --network=$INPUT_NETWORK $INPUT_DFN_PARAMS
+which dfx
+
+dfx deploy --network=$INPUT_NETWORK $INPUT_DFX_PARAMS

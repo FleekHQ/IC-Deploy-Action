@@ -30,7 +30,7 @@ jobs:
         run: npm install
       - name: Deploy canisters
         id: deploy
-        uses: fleekhq/ic-deploy-action@v1
+        uses: fleekhq/ic-deploy-action@master
         with:
           identity: ${{ secrets.DFX_IDENTITY }}
           wallets: ${{ secrets.DFX_WALLETS }}
@@ -97,7 +97,7 @@ jobs:
         run: npm install
       - name: Deploy canisters
         id: deploy
-        uses: fleekhq/ic-deploy-action@v1
+        uses: fleekhq/ic-deploy-action@master
         with:
           identity: ${{ secrets.DFX_IDENTITY }}
           wallets: ${{ secrets.DFX_WALLETS }}
@@ -106,9 +106,9 @@ jobs:
         run: echo success!
 ```
 
-### dfn_params
-The parameters of the dfn call can be customized with the `dfn_params` input. This input will simply append the content of the input to the dfn command.
-For example, in order to run, `dfn --no-wallet` instead of the default `dfn`, input `--no-wallet` to this input.
+### dfx_params
+The parameters of the dfx call can be customized with the `dfx_params` input. This input will simply append the content of the input to the dfx command.
+For example, in order to run, `dfx --no-wallet` instead of the default `dfx`, input `--no-wallet` to this input.
 
 ```yml
 on: [push]
@@ -123,11 +123,11 @@ jobs:
         run: npm install
       - name: Deploy canisters
         id: deploy
-        uses: fleekhq/ic-deploy-action@v1
+        uses: fleekhq/ic-deploy-action@master
         with:
           identity: ${{ secrets.DFX_IDENTITY }}
           wallets: ${{ secrets.DFX_WALLETS }}
-          dfn_params: --no-wallet
+          dfx_params: --no-wallet
       - name: Show success message
         run: echo success!
 ```

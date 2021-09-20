@@ -15,8 +15,8 @@ inputs:
     description: 'The network that the canister will be deployed to'
     required: false
     default: 'ic'
-  dfn_params:
-    description: 'Parameters appended to the dfn command'
+  dfx_params:
+    description: 'Parameters appended to the dfx command'
     required: false
     default: ''    
 runs:
